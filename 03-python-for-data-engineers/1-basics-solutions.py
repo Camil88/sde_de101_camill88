@@ -57,6 +57,49 @@ my_tuple[0]
 my_tuple[1]
 'hello'
 
+# Counting occurrences of an element
+count_tuple = (1, 2, 3, 1, 1, 2)
+# Question: How many times does the number 1 appear in count_tuple?
+count = 0
+for i in count_tuple:
+  if i == 1:
+    count += 1
 
+count
+3
 
+# OR
+count_tuple.count(1)
+3
+# ANSWER: 1 appears 3 times
 
+# Finding the index of an element
+# Question: What is the index of the first occurrence of the number 2 in count_tuple?
+count_tuple.index(2)
+1
+# ANSWER: the index number is 1
+
+# We can loop through our data structures as shown below
+# Question: How do you loop through a list and print its elements?
+l = [1, 2, 3, 4]
+for i in l:
+  print(i)
+
+# Dictionary loop
+# Question: How do you loop through a dictionary and print its keys and values?
+d = {'a': 1, 'b': 2}
+for i in d:
+  print(i, d[i])
+a 1
+b 2
+
+for i, k in d.items():
+  print(i, k)
+a 1
+b 2
+
+# Comprehension is a shorthand way of writing a loop
+# Question: Multiply every element in list l with 2 and print the result
+doubled = [num * 2 for num in l]
+doubled
+[2, 4, 6, 8]
