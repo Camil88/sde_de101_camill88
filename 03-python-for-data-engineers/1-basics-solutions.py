@@ -103,3 +103,48 @@ b 2
 doubled = [num * 2 for num in l]
 doubled
 [2, 4, 6, 8]
+
+# Functions: A block of code that can be re-used as needed. This allows for us to have logic defined in one place, making it easy to maintain and use.
+## For example, let's create a simple function that takes a list as an input and returns another list whose values are greater than 3
+def gt_three(input_list):
+    return [elt for elt in input_list if elt > 3]
+## NOTE: we use list comprehension with filtering in the above function
+
+list_1 = [1, 2, 3, 4, 5, 6]
+# Question: How do you use the gt_three function to filter elements greater than 3 from list_1?
+gt_three(list_1)
+[4, 5, 6]
+
+list_2 = [1, 2, 3, 1, 1, 1]
+# Question: What will be the output of gt_three(list_2)?
+# ANSWER: empty list
+gt_three(list_2)
+[]
+
+# Classes and Objects
+# Think of a class as a blueprint and objects as things created based on that blueprint
+# You can define classes in Python as shown below
+class DataExtractor:
+    def __init__(self, some_value):
+        self.some_value = some_value
+
+    def get_connection(self):
+        # Some logic
+        # some_value is accessible using self.some_value
+        pass
+
+    def close_connection(self):
+        # Some logic
+        # some_value is accessible using self.some_value
+        pass
+
+# Question: How do you create a DataExtractor object and print its some_value attribute?
+new_obj = DataExtractor(2)
+print(new_obj.some_value)
+2
+
+from datetime import datetime  # You can import library or your code from another file with the import statement
+# Question: How do you print the current date in the format 'YYYY MM DD'? Hint: Google strftime
+now = datetime.now()
+formatted = now.strftime('%Y %m %d')
+print(formatted)
