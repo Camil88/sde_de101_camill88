@@ -167,12 +167,13 @@ finally:
 # For example, let's consider exception handling on accessing an element that is not present in a list l
 l = [1, 2, 3, 4, 5]
 # Question: How do you handle an IndexError when accessing an invalid index in a list?
+idx = 5
 try:
-  print(l[5])
+  element = l[idx]
 except IndexError:
   print('Index is out of scope')
 else:
-  print(f'Index value is {l[5]}')
+  print(f'Index value is {element}')
 
 Index is out of scope
 
