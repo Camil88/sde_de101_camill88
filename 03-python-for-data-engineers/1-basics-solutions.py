@@ -148,3 +148,32 @@ from datetime import datetime  # You can import library or your code from anothe
 now = datetime.now()
 formatted = now.strftime('%Y %m %d')
 print(formatted)
+
+# Exception handling: When an error occurs, we need our code to gracefully handle it without just stopping. 
+# Here is how we can handle errors when the program is running
+try:
+    # Code that might raise an exception
+    pass
+except Exception as e: 
+    # Code that runs if the exception occurs
+    pass
+else:
+    # Code that runs if no exception occurs
+    pass
+finally:
+    # Code that always runs, regardless of exceptions
+    pass
+
+# For example, let's consider exception handling on accessing an element that is not present in a list l
+l = [1, 2, 3, 4, 5]
+# Question: How do you handle an IndexError when accessing an invalid index in a list?
+try:
+  print(l[5])
+except IndexError:
+  print('Index is out of scope')
+else:
+  print(f'Index value is {l[5]}')
+
+Index is out of scope
+
+
