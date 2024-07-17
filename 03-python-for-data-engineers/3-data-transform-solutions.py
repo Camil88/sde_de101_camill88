@@ -15,11 +15,15 @@ customer_ids = set()
 duplicated_ids = set()
 for row in data:
   if row['Customer_ID'] not in customer_ids:
-		unique_data.append(row)
-		customer_ids.add(row['Customer_ID'])
-	else:
-		duplicated_ids.add(row['Customer_ID'])
+	unique_data.append(row)
+	customer_ids.add(row['Customer_ID'])
+  else:
+	duplicated_ids.add(row['Customer_ID'])
 
 # Question: How do you handle missing values by replacing them with 0?
-
+for row in data_unique:
+  if not row['Age']:
+	row['Age'] = 0
+  if not row['Purchase_Amount']:
+	row['Purchase_Amount'] = 0.0
 
