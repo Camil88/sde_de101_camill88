@@ -27,3 +27,16 @@ for row in data_unique:
   if not row['Purchase_Amount']:
 	row['Purchase_Amount'] = 0.0
 
+# Question: How do you convert the Gender column to a binary format (0 for Female, 1 for Male)?
+for row in data_unique:
+  if row['Gender'] == 'Male':
+	row['Gender'] = 1
+  elif row['Gender'] == 'Female':
+	row['Gender'] = 0
+
+# Question: How do you split the Customer_Name column into separate First_Name and Last_Name columns?
+for row in data_unique:
+  row['Name'] = row['Customer_Name'].split()[0]
+  row['Surname'] = row['Customer_Name'].split()[1]
+
+# Question: How do you calculate the total purchase amount by Gender?	
